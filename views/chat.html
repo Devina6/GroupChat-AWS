@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net;">-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="main"><br><br>
+                <div class="row">
+                    <div class="col-3">
+                        <div class=" card card-body border-secondary chat" >
+                            <h5 class="text-center" style="font-family: Georgia, 'Times New Roman', Times, serif;">Select or create your own groups to join</h5>
+                            <div id="groups">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create New Group</button><br><br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h1 class="text-center" style="font-family: Georgia, 'Times New Roman', Times, serif;">Feel Free to CONNECT</h1>
+                        <div class=" card card-body border-secondary chat" >
+                            <h5 class="text-center" style="font-family: Georgia, 'Times New Roman', Times, serif;" id="groupName"></h5>
+                            <input type="submit" class="btn btn-outline-secondary btn-lg " value="Load Previous Messages" id="previousBtn" style="visibility: hidden;">
+                            <br><br>
+                            <div id="chat-display">
+                            </div>
+                            <br>
+                            <form method="post">
+                                <div class="d-flex justify-content-around" >
+                                    <input type="text" class="form-control" id="message" placeholder="Type your message..." require disabled>
+                                    <input type="submit" class="btn btn-success btn-lg " value="Send" id="sendBtn" disabled>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-3" id="users" style="visibility: hidden;">
+                        <div class=" card card-body border-secondary chat" >
+                            <h5 class="text-center" style="font-family: Georgia, 'Times New Roman', Times, serif;">Add Members to group</h5>
+                            <ul id="nonMembers">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">New Group</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" >
+                            <label for=""newGroupName" class="form-label">Name of group:</label>
+                            <input type="text" class="form-control" id="newGroupName" require>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" id="groupBtn">Create Group</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/chat.js"></script> 
+    </body>
+</html>

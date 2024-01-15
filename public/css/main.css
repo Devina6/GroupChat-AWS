@@ -1,0 +1,41 @@
+body{
+    background-image: url("/images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color:darkolivegreen;
+}
+label{
+    padding-right: 30px;
+    font-family: cursive;
+    font-size: 15px;
+}
+.chat{
+    background-image: url("/images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.message-green{
+    background-color:darkseagreen;
+    padding: 1%;
+    width: 70%;
+    border-radius:10px;
+     
+}
+.message-yellow{
+    background-color:bisque;
+    padding:1%;
+    width: 70%;
+    border-radius:10px;
+    position: relative;
+    left: 30%;
+    
+}
